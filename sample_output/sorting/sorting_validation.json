@@ -1,0 +1,73 @@
+{
+  "archived": 10,
+  "collected": 9,
+  "skipped": 1,
+  "ascending_times": [
+    10.0,
+    15.0,
+    19.0,
+    20.0,
+    23.0,
+    30.0,
+    32.0,
+    39.0,
+    50.0,
+    54.0
+  ],
+  "nine_cases": [
+    {
+      "size": 100,
+      "condition": "random",
+      "passed": true,
+      "displaced_records": 99
+    },
+    {
+      "size": 100,
+      "condition": "nearly_sorted",
+      "passed": true,
+      "displaced_records": 10
+    },
+    {
+      "size": 100,
+      "condition": "reversed",
+      "passed": true,
+      "displaced_records": 100
+    },
+    {
+      "size": 500,
+      "condition": "random",
+      "passed": true,
+      "displaced_records": 500
+    },
+    {
+      "size": 500,
+      "condition": "nearly_sorted",
+      "passed": true,
+      "displaced_records": 50
+    },
+    {
+      "size": 500,
+      "condition": "reversed",
+      "passed": true,
+      "displaced_records": 500
+    },
+    {
+      "size": 1000,
+      "condition": "random",
+      "passed": true,
+      "displaced_records": 999
+    },
+    {
+      "size": 1000,
+      "condition": "nearly_sorted",
+      "passed": true,
+      "displaced_records": 100
+    },
+    {
+      "size": 1000,
+      "condition": "reversed",
+      "passed": true,
+      "displaced_records": 1000
+    }
+  ]
+}

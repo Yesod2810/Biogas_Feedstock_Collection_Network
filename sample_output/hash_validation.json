@@ -1,0 +1,209 @@
+{
+  "records_inserted": 125,
+  "strategy": "linear probing",
+  "initial_capacity": 11,
+  "threshold": 0.7,
+  "occupied_threshold": 0.85,
+  "load_samples": [
+    {
+      "successful_insertions": 10,
+      "active_records": 10,
+      "capacity": 23,
+      "tombstones": 0,
+      "load_factor": 0.43478260869565216,
+      "occupied_factor": 0.43478260869565216
+    },
+    {
+      "successful_insertions": 20,
+      "active_records": 20,
+      "capacity": 47,
+      "tombstones": 0,
+      "load_factor": 0.425531914893617,
+      "occupied_factor": 0.425531914893617
+    },
+    {
+      "successful_insertions": 30,
+      "active_records": 30,
+      "capacity": 47,
+      "tombstones": 0,
+      "load_factor": 0.6382978723404256,
+      "occupied_factor": 0.6382978723404256
+    },
+    {
+      "successful_insertions": 40,
+      "active_records": 40,
+      "capacity": 97,
+      "tombstones": 0,
+      "load_factor": 0.41237113402061853,
+      "occupied_factor": 0.41237113402061853
+    },
+    {
+      "successful_insertions": 50,
+      "active_records": 50,
+      "capacity": 97,
+      "tombstones": 0,
+      "load_factor": 0.5154639175257731,
+      "occupied_factor": 0.5154639175257731
+    },
+    {
+      "successful_insertions": 60,
+      "active_records": 60,
+      "capacity": 97,
+      "tombstones": 0,
+      "load_factor": 0.6185567010309279,
+      "occupied_factor": 0.6185567010309279
+    },
+    {
+      "successful_insertions": 70,
+      "active_records": 70,
+      "capacity": 197,
+      "tombstones": 0,
+      "load_factor": 0.3553299492385787,
+      "occupied_factor": 0.3553299492385787
+    },
+    {
+      "successful_insertions": 80,
+      "active_records": 80,
+      "capacity": 197,
+      "tombstones": 0,
+      "load_factor": 0.40609137055837563,
+      "occupied_factor": 0.40609137055837563
+    },
+    {
+      "successful_insertions": 90,
+      "active_records": 90,
+      "capacity": 197,
+      "tombstones": 0,
+      "load_factor": 0.45685279187817257,
+      "occupied_factor": 0.45685279187817257
+    },
+    {
+      "successful_insertions": 100,
+      "active_records": 100,
+      "capacity": 197,
+      "tombstones": 0,
+      "load_factor": 0.5076142131979695,
+      "occupied_factor": 0.5076142131979695
+    },
+    {
+      "successful_insertions": 110,
+      "active_records": 110,
+      "capacity": 197,
+      "tombstones": 0,
+      "load_factor": 0.5583756345177665,
+      "occupied_factor": 0.5583756345177665
+    },
+    {
+      "successful_insertions": 120,
+      "active_records": 120,
+      "capacity": 197,
+      "tombstones": 0,
+      "load_factor": 0.6091370558375635,
+      "occupied_factor": 0.6091370558375635
+    }
+  ],
+  "resizes": [
+    {
+      "old_capacity": 11,
+      "new_capacity": 23,
+      "records_moved": 7,
+      "tombstones_removed": 0,
+      "rehash_probes": 12,
+      "reason": "Projected active load would exceed 0.70",
+      "insertion_number": 8
+    },
+    {
+      "old_capacity": 23,
+      "new_capacity": 47,
+      "records_moved": 16,
+      "tombstones_removed": 0,
+      "rehash_probes": 34,
+      "reason": "Projected active load would exceed 0.70",
+      "insertion_number": 17
+    },
+    {
+      "old_capacity": 47,
+      "new_capacity": 97,
+      "records_moved": 32,
+      "tombstones_removed": 0,
+      "rehash_probes": 37,
+      "reason": "Projected active load would exceed 0.70",
+      "insertion_number": 33
+    },
+    {
+      "old_capacity": 97,
+      "new_capacity": 197,
+      "records_moved": 67,
+      "tombstones_removed": 0,
+      "rehash_probes": 84,
+      "reason": "Projected active load would exceed 0.70",
+      "insertion_number": 68
+    }
+  ],
+  "bulk_state": {
+    "records": 125,
+    "capacity": 197,
+    "load_factor": 0.6345177664974619,
+    "occupied_factor": 0.6345177664974619,
+    "insertion_probes": 277,
+    "mean_insertion_probes": 2.216,
+    "rehash_probes": 167,
+    "inserts_with_placement_collisions": 52
+  },
+  "collision": {
+    "first_id": "3d8af",
+    "second_id": "71a14",
+    "home": 5,
+    "capacity": 11,
+    "second_insert": {
+      "operation": "INSERT",
+      "farm_id": "71a14",
+      "home": 5,
+      "capacity": 11,
+      "steps": [
+        {
+          "index": 5,
+          "state": "OCCUPIED",
+          "farm_id": "3d8af"
+        },
+        {
+          "index": 6,
+          "state": "EMPTY",
+          "farm_id": ""
+        }
+      ],
+      "result": "INSERTED",
+      "slot": 6
+    },
+    "survivor_search_after_delete": {
+      "operation": "SEARCH",
+      "farm_id": "71a14",
+      "home": 5,
+      "capacity": 11,
+      "steps": [
+        {
+          "index": 5,
+          "state": "DELETED",
+          "farm_id": ""
+        },
+        {
+          "index": 6,
+          "state": "OCCUPIED",
+          "farm_id": "71a14"
+        }
+      ],
+      "result": "FOUND",
+      "slot": 6
+    }
+  },
+  "successful_search_ids": [
+    "3d8af",
+    "4mw8y",
+    "dsyit"
+  ],
+  "missing_id": "zzzzz",
+  "deleted_id": "3d8af",
+  "active_after_delete": 124,
+  "tombstones_after_delete": 1,
+  "complete_fields_per_record": 20
+}

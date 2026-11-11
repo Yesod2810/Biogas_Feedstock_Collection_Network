@@ -1,0 +1,33 @@
+' Author: Thanh Dat Nguyen
+' Student ID: 23857030
+' Purpose: UML sequence of the four real modules.
+@startuml
+title Four-module collection-request interaction
+autonumber
+participant "Interactive menu\nApplication" as UI
+participant "CollectionScheduler\nModule 3" as S
+participant "HashTable\nModule 2" as H
+participant "Graph\nModule 1" as G
+participant "Archive service\nModule 4" as A
+UI -> S : submit(id, farm, F)
+S -> H : search(FarmID)
+H --> S : FarmRecord
+S -> G : dijkstra(farm, hub)
+G --> S : PathResult(T, path)
+S -> S : compute P=F/(T+1)
+S -> A : record(request, pending)
+A -> A : merge_sort; save
+S -> S : heap.insert(request)
+S --> UI : accepted request
+UI -> S : extract_priority()
+S -> H : search(FarmID) again
+H --> S : current record / None
+S -> A : record(request, collected or skipped)
+A -> A : merge_sort; save
+S -> S : heap.extract_priority()
+S --> UI : eligible request; skip stale entries
+UI -> A : records() / export_csv()
+A --> UI : complete history in ascending T
+note over S: MaxHeap is internal to Module 3.
+note over A: SessionRecorder + CollectionDatabase + manual sorts.
+@enduml

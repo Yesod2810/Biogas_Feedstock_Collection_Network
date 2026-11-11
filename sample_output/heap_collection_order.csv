@@ -1,0 +1,11 @@
+CollectionRank,RequestID,FarmID,Name,EstimatedFeedstock,TransportTime,CollectionPriority,Path
+1,C001,doj25,Westpork - Pinjarra Piggery,11.0,10.0,1.0,doj25 -> HUB_PINJARRA
+2,C004,bcdff,Nambeelup Piggery,21.0,20.0,1.0,bcdff -> HUB_PINJARRA
+3,C003,974d7,Pindari Piggery,15.0,19.0,0.75,974d7 -> doj25 -> HUB_PINJARRA
+4,C008,c6e42,Tralka Pty Ltd,24.0,39.0,0.6,c6e42 -> bcdff -> HUB_PINJARRA
+5,C002,c96c9,GD Pork Piggery,8.0,15.0,0.5,c96c9 -> doj25 -> HUB_PINJARRA
+6,C006,c81cd,Charla Downs Feedlot,15.5,30.0,0.5,c81cd -> HUB_PINJARRA
+7,C007,0bfa4,Unknown,16.5,32.0,0.5,0bfa4 -> c96c9 -> doj25 -> HUB_PINJARRA
+8,C009,1cc85,Karnet Prison Farm,25.5,50.0,0.5,1cc85 -> bcdff -> HUB_PINJARRA
+9,C010,f4386,Peel Pork Piggery,27.5,54.0,0.5,f4386 -> c81cd -> HUB_PINJARRA
+10,C005,56jwf,Unknown Feedlot,6.0,23.0,0.25,56jwf -> 974d7 -> doj25 -> HUB_PINJARRA

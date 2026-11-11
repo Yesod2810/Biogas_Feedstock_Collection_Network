@@ -1,0 +1,24 @@
+MODULE 4 - SORTED COLLECTION DATABASE
+All 10 accepted requests retained: 9 collected; 1 skipped after farm deletion.
+Key: estimated shortest transport time T, ascending.
+RecordID | RequestID | FarmID | T minutes | Status
+S000001_C001 | C001 | doj25 | 10 | skipped
+S000001_C002 | C002 | c96c9 | 15 | collected
+S000001_C003 | C003 | 974d7 | 19 | collected
+S000001_C004 | C004 | bcdff | 20 | collected
+S000001_C005 | C005 | 56jwf | 23 | collected
+S000001_C006 | C006 | c81cd | 30 | collected
+S000001_C007 | C007 | 0bfa4 | 32 | collected
+S000001_C008 | C008 | c6e42 | 39 | collected
+S000001_C009 | C009 | 1cc85 | 50 | collected
+S000001_C010 | C010 | f4386 | 54 | collected
+
+PASS: 100 / random / both algorithms
+PASS: 100 / nearly_sorted / both algorithms
+PASS: 100 / reversed / both algorithms
+PASS: 500 / random / both algorithms
+PASS: 500 / nearly_sorted / both algorithms
+PASS: 500 / reversed / both algorithms
+PASS: 1000 / random / both algorithms
+PASS: 1000 / nearly_sorted / both algorithms
+PASS: 1000 / reversed / both algorithms

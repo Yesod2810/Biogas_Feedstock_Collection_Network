@@ -1,0 +1,11 @@
+RequestID,FarmID,EstimatedFeedstock,Unit,Case
+C001,doj25,11,tonnes,Duplicate RequestID while the main requests are queued
+C011,doj25,5,tonnes,Second outstanding request for the same farm
+E001,gslqa,8,tonnes,Unreachable real farm
+E002,BAD_ID,5,tonnes,Invalid FarmID syntax; query test only
+E003,zzzzz,5,tonnes,Missing FarmID; query test only
+E004,c96c9,,tonnes,Blank feedstock
+E005,c96c9,-4,tonnes,Negative feedstock
+E006,c96c9,0,tonnes,Zero feedstock
+E007,c96c9,nan,tonnes,Non-finite feedstock
+E008,c96c9,many,tonnes,Non-numerical feedstock

@@ -1,0 +1,244 @@
+COMP5008 | MODULE 3 | HEAP-BASED FEEDSTOCK COLLECTION
+Network: test | Formula P=F/(T+1) | F in modelled tonnes; T in minutes
+Feedstock values are educational scenarios, not source website production figures.
+Max heap; exact priority ties use FIFO insertion order.
+
+MAIN REQUEST INSERTIONS
+PRIORITY C001 | FarmID=doj25 | F=11 tonnes | T=10 minutes | P=11/(10+1)=1.000000 | route=doj25 -> HUB_PINJARRA
+HEAP after INSERT C001 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+]
+PRIORITY C002 | FarmID=c96c9 | F=8 tonnes | T=15 minutes | P=8/(15+1)=0.500000 | route=c96c9 -> doj25 -> HUB_PINJARRA
+HEAP after INSERT C002 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C002 | farm=c96c9 | P=0.500000
+]
+PRIORITY C003 | FarmID=974d7 | F=15 tonnes | T=19 minutes | P=15/(19+1)=0.750000 | route=974d7 -> doj25 -> HUB_PINJARRA
+HEAP after INSERT C003 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C002 | farm=c96c9 | P=0.500000
+  2: C003 | farm=974d7 | P=0.750000
+]
+PRIORITY C004 | FarmID=bcdff | F=21 tonnes | T=20 minutes | P=21/(20+1)=1.000000 | route=bcdff -> HUB_PINJARRA
+HEAP after INSERT C004 | swaps=3<->1
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C002 | farm=c96c9 | P=0.500000
+]
+PRIORITY C005 | FarmID=56jwf | F=6 tonnes | T=23 minutes | P=6/(23+1)=0.250000 | route=56jwf -> 974d7 -> doj25 -> HUB_PINJARRA
+HEAP after INSERT C005 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C002 | farm=c96c9 | P=0.500000
+  4: C005 | farm=56jwf | P=0.250000
+]
+PRIORITY C006 | FarmID=c81cd | F=15.5 tonnes | T=30 minutes | P=15.5/(30+1)=0.500000 | route=c81cd -> HUB_PINJARRA
+HEAP after INSERT C006 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C002 | farm=c96c9 | P=0.500000
+  4: C005 | farm=56jwf | P=0.250000
+  5: C006 | farm=c81cd | P=0.500000
+]
+PRIORITY C007 | FarmID=0bfa4 | F=16.5 tonnes | T=32 minutes | P=16.5/(32+1)=0.500000 | route=0bfa4 -> c96c9 -> doj25 -> HUB_PINJARRA
+HEAP after INSERT C007 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C002 | farm=c96c9 | P=0.500000
+  4: C005 | farm=56jwf | P=0.250000
+  5: C006 | farm=c81cd | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+]
+PRIORITY C008 | FarmID=c6e42 | F=24 tonnes | T=39 minutes | P=24/(39+1)=0.600000 | route=c6e42 -> bcdff -> HUB_PINJARRA
+HEAP after INSERT C008 | swaps=7<->3
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C008 | farm=c6e42 | P=0.600000
+  4: C005 | farm=56jwf | P=0.250000
+  5: C006 | farm=c81cd | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+  7: C002 | farm=c96c9 | P=0.500000
+]
+PRIORITY C009 | FarmID=1cc85 | F=25.5 tonnes | T=50 minutes | P=25.5/(50+1)=0.500000 | route=1cc85 -> bcdff -> HUB_PINJARRA
+HEAP after INSERT C009 | swaps=none
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C008 | farm=c6e42 | P=0.600000
+  4: C005 | farm=56jwf | P=0.250000
+  5: C006 | farm=c81cd | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+  7: C002 | farm=c96c9 | P=0.500000
+  8: C009 | farm=1cc85 | P=0.500000
+]
+PRIORITY C010 | FarmID=f4386 | F=27.5 tonnes | T=54 minutes | P=27.5/(54+1)=0.500000 | route=f4386 -> c81cd -> HUB_PINJARRA
+HEAP after INSERT C010 | swaps=9<->4
+[
+  0: C001 | farm=doj25 | P=1.000000
+  1: C004 | farm=bcdff | P=1.000000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C008 | farm=c6e42 | P=0.600000
+  4: C010 | farm=f4386 | P=0.500000
+  5: C006 | farm=c81cd | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+  7: C002 | farm=c96c9 | P=0.500000
+  8: C009 | farm=1cc85 | P=0.500000
+  9: C005 | farm=56jwf | P=0.250000
+]
+
+VALIDATION WHILE THE MAIN REQUESTS ARE QUEUED
+REJECT C001 | Duplicate collection RequestID C001.
+REJECT C011 | Farm doj25 already has a pending collection request.
+REJECT E001 | Unreachable farm gslqa: a valid collection route cannot currently be calculated.
+REJECT E002 | Invalid FarmID: 'BAD_ID'. Use exactly five lowercase letters/digits.
+REJECT E003 | Farm record zzzzz is missing or has been deleted from the hash table.
+REJECT E004 | EstimatedFeedstock must be a finite number.
+REJECT E005 | EstimatedFeedstock must be greater than zero tonnes.
+REJECT E006 | EstimatedFeedstock must be greater than zero tonnes.
+REJECT E007 | EstimatedFeedstock must be a finite number.
+REJECT E008 | EstimatedFeedstock must be a finite number.
+PEEK C001 | P=1.000000 | heap unchanged; size=10
+
+MAIN EXTRACTIONS (first five, followed by the remaining requests)
+HEAP after EXTRACT C001 | swaps=0<->1, 1<->3, 3<->7
+[
+  0: C004 | farm=bcdff | P=1.000000
+  1: C008 | farm=c6e42 | P=0.600000
+  2: C003 | farm=974d7 | P=0.750000
+  3: C002 | farm=c96c9 | P=0.500000
+  4: C010 | farm=f4386 | P=0.500000
+  5: C006 | farm=c81cd | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+  7: C005 | farm=56jwf | P=0.250000
+  8: C009 | farm=1cc85 | P=0.500000
+]
+COLLECT C001 | farm=doj25 | P=1.000000 | F=11 tonnes | T=10 minutes
+HEAP after EXTRACT C004 | swaps=0<->2, 2<->5
+[
+  0: C003 | farm=974d7 | P=0.750000
+  1: C008 | farm=c6e42 | P=0.600000
+  2: C006 | farm=c81cd | P=0.500000
+  3: C002 | farm=c96c9 | P=0.500000
+  4: C010 | farm=f4386 | P=0.500000
+  5: C009 | farm=1cc85 | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+  7: C005 | farm=56jwf | P=0.250000
+]
+COLLECT C004 | farm=bcdff | P=1.000000 | F=21 tonnes | T=20 minutes
+HEAP after EXTRACT C003 | swaps=0<->1, 1<->3
+[
+  0: C008 | farm=c6e42 | P=0.600000
+  1: C002 | farm=c96c9 | P=0.500000
+  2: C006 | farm=c81cd | P=0.500000
+  3: C005 | farm=56jwf | P=0.250000
+  4: C010 | farm=f4386 | P=0.500000
+  5: C009 | farm=1cc85 | P=0.500000
+  6: C007 | farm=0bfa4 | P=0.500000
+]
+COLLECT C003 | farm=974d7 | P=0.750000 | F=15 tonnes | T=19 minutes
+HEAP after EXTRACT C008 | swaps=0<->1
+[
+  0: C002 | farm=c96c9 | P=0.500000
+  1: C007 | farm=0bfa4 | P=0.500000
+  2: C006 | farm=c81cd | P=0.500000
+  3: C005 | farm=56jwf | P=0.250000
+  4: C010 | farm=f4386 | P=0.500000
+  5: C009 | farm=1cc85 | P=0.500000
+]
+COLLECT C008 | farm=c6e42 | P=0.600000 | F=24 tonnes | T=39 minutes
+HEAP after EXTRACT C002 | swaps=0<->2
+[
+  0: C006 | farm=c81cd | P=0.500000
+  1: C007 | farm=0bfa4 | P=0.500000
+  2: C009 | farm=1cc85 | P=0.500000
+  3: C005 | farm=56jwf | P=0.250000
+  4: C010 | farm=f4386 | P=0.500000
+]
+COLLECT C002 | farm=c96c9 | P=0.500000 | F=8 tonnes | T=15 minutes
+First five collections: C001 -> C004 -> C003 -> C008 -> C002
+HEAP after EXTRACT C006 | swaps=0<->1
+[
+  0: C007 | farm=0bfa4 | P=0.500000
+  1: C010 | farm=f4386 | P=0.500000
+  2: C009 | farm=1cc85 | P=0.500000
+  3: C005 | farm=56jwf | P=0.250000
+]
+COLLECT C006 | farm=c81cd | P=0.500000 | F=15.5 tonnes | T=30 minutes
+HEAP after EXTRACT C007 | swaps=0<->2
+[
+  0: C009 | farm=1cc85 | P=0.500000
+  1: C010 | farm=f4386 | P=0.500000
+  2: C005 | farm=56jwf | P=0.250000
+]
+COLLECT C007 | farm=0bfa4 | P=0.500000 | F=16.5 tonnes | T=32 minutes
+HEAP after EXTRACT C009 | swaps=0<->1
+[
+  0: C010 | farm=f4386 | P=0.500000
+  1: C005 | farm=56jwf | P=0.250000
+]
+COLLECT C009 | farm=1cc85 | P=0.500000 | F=25.5 tonnes | T=50 minutes
+HEAP after EXTRACT C010 | swaps=none
+[
+  0: C005 | farm=56jwf | P=0.250000
+]
+COLLECT C010 | farm=f4386 | P=0.500000 | F=27.5 tonnes | T=54 minutes
+HEAP after EXTRACT C005 | swaps=none
+[]
+COLLECT C005 | farm=56jwf | P=0.250000 | F=6 tonnes | T=23 minutes
+RESULTING COLLECTION ORDER: C001 -> C004 -> C003 -> C008 -> C002 -> C006 -> C007 -> C009 -> C010 -> C005
+HEAP after EXTRACT (empty) | swaps=none
+[]
+Empty heap: no eligible collection request remains.
+
+DELETED HASH RECORD FIXTURE
+REJECT DELETED01 | Farm record doj25 is missing or has been deleted from the hash table.
+
+HASH RECORD DELETED AFTER QUEUING
+PRIORITY STALE01 | FarmID=doj25 | F=11 tonnes | T=10 minutes | P=11/(10+1)=1.000000 | route=doj25 -> HUB_PINJARRA
+HEAP after INSERT STALE01 | swaps=none
+[
+  0: STALE01 | farm=doj25 | P=1.000000
+]
+PRIORITY LIVE01 | FarmID=c96c9 | F=1 tonnes | T=15 minutes | P=1/(15+1)=0.062500 | route=c96c9 -> doj25 -> HUB_PINJARRA
+HEAP after INSERT LIVE01 | swaps=none
+[
+  0: STALE01 | farm=doj25 | P=1.000000
+  1: LIVE01 | farm=c96c9 | P=0.062500
+]
+PEEK ERROR handled without removal: Highest request STALE01 is stale: farm record missing/deleted from the hash table; extraction will skip it.
+HEAP after EXTRACT STALE01 | swaps=none
+[
+  0: LIVE01 | farm=c96c9 | P=0.062500
+]
+SKIP STALE01 | farm=doj25 | farm record missing/deleted from the hash table
+HEAP after EXTRACT LIVE01 | swaps=none
+[]
+COLLECT LIVE01 | farm=c96c9 | P=0.062500 | F=1 tonnes | T=15 minutes
+
+ZERO-TIME COLOCATION FIXTURE
+Separate scenario: the real doj25 vertex is also the temporary hub. Main network unchanged.
+PRIORITY ZERO01 | FarmID=doj25 | F=5 tonnes | T=0 minutes | P=5/(0+1)=5.000000 | route=doj25
+HEAP after INSERT ZERO01 | swaps=none
+[
+  0: ZERO01 | farm=doj25 | P=5.000000
+]
+HEAP after EXTRACT ZERO01 | swaps=none
+[]
+COLLECT ZERO01 | farm=doj25 | P=5.000000 | F=5 tonnes | T=0 minutes
+
+FARM ABSENT FROM SELECTED GRAPH FIXTURE
+REJECT NO_VERTEX | Farm doj25 is not in the selected graph; no valid collection route can currently be calculated.

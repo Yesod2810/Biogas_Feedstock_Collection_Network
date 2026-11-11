@@ -1,0 +1,312 @@
+COMP5008 | MODULE 2 | HASH-BASED FARM LOOKUP
+Real source farms: 125 | strategy: linear probing | initial slots: 11
+Hash: h = (31*h + ord(character)) % m, starting at h=0.
+Probe: (home + i) % m. Active threshold: 0.70; occupied threshold: 0.85.
+
+EXPLICIT COLLISION EXPERIMENT (separate 11-slot table)
+3d8af and 71a14 both hash to home slot 5 modulo 11.
+Initial state:
+[  0] EMPTY
+[  1] EMPTY
+[  2] EMPTY
+[  3] EMPTY
+[  4] EMPTY
+[  5] EMPTY
+[  6] EMPTY
+[  7] EMPTY
+[  8] EMPTY
+[  9] EMPTY
+[ 10] EMPTY
+INSERT 3d8af | home=5 m=11 | 5:EMPTY | INSERTED slot=5
+After first insertion:
+[  0] EMPTY
+[  1] EMPTY
+[  2] EMPTY
+[  3] EMPTY
+[  4] EMPTY
+[  5] OCCUPIED 3d8af
+[  6] EMPTY
+[  7] EMPTY
+[  8] EMPTY
+[  9] EMPTY
+[ 10] EMPTY
+INSERT 71a14 | home=5 m=11 | 5:OCCUPIED(3d8af) -> 6:EMPTY | INSERTED slot=6
+After collision resolution:
+[  0] EMPTY
+[  1] EMPTY
+[  2] EMPTY
+[  3] EMPTY
+[  4] EMPTY
+[  5] OCCUPIED 3d8af
+[  6] OCCUPIED 71a14
+[  7] EMPTY
+[  8] EMPTY
+[  9] EMPTY
+[ 10] EMPTY
+
+DELETE THE HEAD OF THAT PROBE CLUSTER
+DELETE 3d8af | home=5 m=11 | 5:OCCUPIED(3d8af) | DELETED slot=5
+Deleted 3d8af | Kamarah Piggery.
+Records=1 | slots=11 | tombstones=1 | alpha=0.0909 | occupied=0.1818 | thresholds=0.70/0.85 | successful_insertions=2 | rehashes=0
+State with tombstone:
+[  0] EMPTY
+[  1] EMPTY
+[  2] EMPTY
+[  3] EMPTY
+[  4] EMPTY
+[  5] DELETED
+[  6] OCCUPIED 71a14
+[  7] EMPTY
+[  8] EMPTY
+[  9] EMPTY
+[ 10] EMPTY
+SEARCH 71a14 | home=5 m=11 | 5:DELETED -> 6:OCCUPIED(71a14) | FOUND slot=6
+Surviving colliding farm found after deletion: 71a14
+SEARCH 3d8af | home=5 m=11 | 5:DELETED -> 6:OCCUPIED(71a14) -> 7:EMPTY | NOT_FOUND
+FarmID 3d8af not found.
+DELETE 3d8af | home=5 m=11 | 5:DELETED -> 6:OCCUPIED(71a14) -> 7:EMPTY | NOT_FOUND
+FarmID 3d8af not found; nothing deleted.
+Records=1 | slots=11 | tombstones=1 | alpha=0.0909 | occupied=0.1818 | thresholds=0.70/0.85 | successful_insertions=2 | rehashes=0
+INSERT 71a14 | home=5 m=11 | 5:DELETED -> 6:OCCUPIED(71a14) | DUPLICATE slot=6
+Duplicate beyond tombstone rejected: Duplicate FarmID 71a14: existing record retained.
+INSERT 3d8af | home=5 m=11 | 5:DELETED -> 6:OCCUPIED(71a14) -> 7:EMPTY | INSERTED slot=5
+Reinserted deleted record; tombstone reused:
+[  0] EMPTY
+[  1] EMPTY
+[  2] EMPTY
+[  3] EMPTY
+[  4] EMPTY
+[  5] OCCUPIED 3d8af
+[  6] OCCUPIED 71a14
+[  7] EMPTY
+[  8] EMPTY
+[  9] EMPTY
+[ 10] EMPTY
+
+BULK INSERTS (fresh table; original CSV order)
+INSERT 001 3d8af | home=5 probe=5 placed=5 active=1 m=11
+INSERT 002 735d4 | home=8 probe=8 placed=8 active=2 m=11
+INSERT 003 272ee | home=8 probe=8->9 placed=9 active=3 m=11
+INSERT 004 404a0 | home=4 probe=4 placed=4 active=4 m=11
+INSERT 005 bcdff | home=7 probe=7 placed=7 active=5 m=11
+INSERT 006 90629 | home=8 probe=8->9->10 placed=10 active=6 m=11
+INSERT 007 c6e42 | home=6 probe=6 placed=6 active=7 m=11
+Before rehash: INSERT 1d900 | home=10 m=11 | 10:OCCUPIED(90629) -> 0:EMPTY | REHASH_REQUIRED
+GROW before insertion 8: 11 -> 23 slots | moved=7 removed_tombstones=0 rehash_probes=12 | Projected active load would exceed 0.70
+INSERT 008 1d900 | home=17 probe=17 placed=17 active=8 m=23
+INSERT 009 974d7 | home=4 probe=4 placed=4 active=9 m=23
+INSERT 010 9baf2 | home=2 probe=2 placed=2 active=10 m=23
+LOAD after  10 successful insertions | active=10 m=23 tombstones=0 | alpha=0.4348 occupied=0.4348
+INSERT 011 c6748 | home=6 probe=6 placed=6 active=11 m=23
+INSERT 012 7c9d7 | home=9 probe=9 placed=9 active=12 m=23
+INSERT 013 c1c13 | home=3 probe=3 placed=3 active=13 m=23
+INSERT 014 a30b2 | home=13 probe=13->14->15->16->17->18 placed=18 active=14 m=23
+INSERT 015 8e64d | home=21 probe=21 placed=21 active=15 m=23
+INSERT 016 da166 | home=11 probe=11 placed=11 active=16 m=23
+Before rehash: INSERT f4386 | home=4 m=23 | 4:OCCUPIED(974d7) -> 5:EMPTY | REHASH_REQUIRED
+GROW before insertion 17: 23 -> 47 slots | moved=16 removed_tombstones=0 rehash_probes=34 | Projected active load would exceed 0.70
+INSERT 017 f4386 | home=9 probe=9 placed=9 active=17 m=47
+INSERT 018 5b8ef | home=24 probe=24->25 placed=25 active=18 m=47
+INSERT 019 c96c9 | home=3 probe=3->4->5->6 placed=6 active=19 m=47
+INSERT 020 71a14 | home=25 probe=25->26 placed=26 active=20 m=47
+LOAD after  20 successful insertions | active=20 m=47 tombstones=0 | alpha=0.4255 occupied=0.4255
+INSERT 021 9bc88 | home=28 probe=28 placed=28 active=21 m=47
+INSERT 022 c81cd | home=42 probe=42 placed=42 active=22 m=47
+INSERT 023 b9f7e | home=2 probe=2->3->4->5->6->7 placed=7 active=23 m=47
+INSERT 024 b9752 | home=30 probe=30 placed=30 active=24 m=47
+INSERT 025 7d2c0 | home=39 probe=39 placed=39 active=25 m=47
+INSERT 026 8d586 | home=15 probe=15 placed=15 active=26 m=47
+INSERT 027 65e30 | home=27 probe=27 placed=27 active=27 m=47
+INSERT 028 96d4e | home=43 probe=43->44->45->46->0->1->2->3->4->5->6->7->8 placed=8 active=28 m=47
+INSERT 029 60e63 | home=17 probe=17->18 placed=18 active=29 m=47
+INSERT 030 f3936 | home=34 probe=34 placed=34 active=30 m=47
+LOAD after  30 successful insertions | active=30 m=47 tombstones=0 | alpha=0.6383 occupied=0.6383
+INSERT 031 df2e4 | home=8 probe=8->9->10->11 placed=11 active=31 m=47
+INSERT 032 7735f | home=37 probe=37 placed=37 active=32 m=47
+Before rehash: INSERT e61b1 | home=10 m=47 | 10:OCCUPIED(735d4) -> 11:OCCUPIED(df2e4) -> 12:OCCUPIED(c1c13) -> 13:EMPTY | REHASH_REQUIRED
+GROW before insertion 33: 47 -> 97 slots | moved=32 removed_tombstones=0 rehash_probes=37 | Projected active load would exceed 0.70
+INSERT 033 e61b1 | home=29 probe=29->30 placed=30 active=33 m=97
+INSERT 034 1cc85 | home=41 probe=41 placed=41 active=34 m=97
+INSERT 035 cd8b9 | home=73 probe=73 placed=73 active=35 m=97
+INSERT 036 cc5fd | home=61 probe=61 placed=61 active=36 m=97
+INSERT 037 ee349 | home=30 probe=30->31 placed=31 active=37 m=97
+INSERT 038 4f803 | home=69 probe=69 placed=69 active=38 m=97
+INSERT 039 8bd08 | home=51 probe=51 placed=51 active=39 m=97
+INSERT 040 80e05 | home=21 probe=21 placed=21 active=40 m=97
+LOAD after  40 successful insertions | active=40 m=97 tombstones=0 | alpha=0.4124 occupied=0.4124
+INSERT 041 fa83e | home=31 probe=31->32->33 placed=33 active=41 m=97
+INSERT 042 946fc | home=62 probe=62 placed=62 active=42 m=97
+INSERT 043 0bfa4 | home=27 probe=27 placed=27 active=43 m=97
+INSERT 044 37d48 | home=30 probe=30->31->32->33->34 placed=34 active=44 m=97
+INSERT 045 6ab14 | home=19 probe=19 placed=19 active=45 m=97
+INSERT 046 fzccd | home=73 probe=73->74 placed=74 active=46 m=97
+INSERT 047 6jvno | home=54 probe=54 placed=54 active=47 m=97
+INSERT 048 v75pu | home=41 probe=41->42 placed=42 active=48 m=97
+INSERT 049 w2ahu | home=0 probe=0 placed=0 active=49 m=97
+INSERT 050 zaz9u | home=95 probe=95 placed=95 active=50 m=97
+LOAD after  50 successful insertions | active=50 m=97 tombstones=0 | alpha=0.5155 occupied=0.5155
+INSERT 051 p2vf9 | home=92 probe=92 placed=92 active=51 m=97
+INSERT 052 643lx | home=53 probe=53 placed=53 active=52 m=97
+INSERT 053 409sd | home=83 probe=83 placed=83 active=53 m=97
+INSERT 054 ir4kh | home=22 probe=22 placed=22 active=54 m=97
+INSERT 055 8nea7 | home=55 probe=55 placed=55 active=55 m=97
+INSERT 056 mh4jw | home=16 probe=16 placed=16 active=56 m=97
+INSERT 057 ow3rb | home=12 probe=12 placed=12 active=57 m=97
+INSERT 058 n8fbc | home=64 probe=64->65->66 placed=66 active=58 m=97
+INSERT 059 h26h5 | home=78 probe=78 placed=78 active=59 m=97
+INSERT 060 d84ta | home=66 probe=66->67->68 placed=68 active=60 m=97
+LOAD after  60 successful insertions | active=60 m=97 tombstones=0 | alpha=0.6186 occupied=0.6186
+INSERT 061 9yr8e | home=90 probe=90 placed=90 active=61 m=97
+INSERT 062 vpr67 | home=62 probe=62->63 placed=63 active=62 m=97
+INSERT 063 4mw8y | home=1 probe=1->2 placed=2 active=63 m=97
+INSERT 064 bo79t | home=85 probe=85 placed=85 active=64 m=97
+INSERT 065 fi4hu | home=76 probe=76 placed=76 active=65 m=97
+INSERT 066 uu7xz | home=66 probe=66->67->68->69->70->71->72 placed=72 active=66 m=97
+INSERT 067 k942w | home=76 probe=76->77->78->79->80->81->82->83->84 placed=84 active=67 m=97
+Before rehash: INSERT sqms9 | home=23 m=97 | 23:OCCUPIED(272ee) -> 24:OCCUPIED(b9752) -> 25:EMPTY | REHASH_REQUIRED
+GROW before insertion 68: 97 -> 197 slots | moved=67 removed_tombstones=0 rehash_probes=84 | Projected active load would exceed 0.70
+INSERT 068 sqms9 | home=116 probe=116->117 placed=117 active=68 m=197
+INSERT 069 ei2au | home=104 probe=104 placed=104 active=69 m=197
+INSERT 070 fxq9n | home=157 probe=157 placed=157 active=70 m=197
+LOAD after  70 successful insertions | active=70 m=197 tombstones=0 | alpha=0.3553 occupied=0.3553
+INSERT 071 vvfln | home=98 probe=98->99 placed=99 active=71 m=197
+INSERT 072 ludq6 | home=154 probe=154 placed=154 active=72 m=197
+INSERT 073 yb1bs | home=140 probe=140 placed=140 active=73 m=197
+INSERT 074 w76rr | home=32 probe=32->33 placed=33 active=74 m=197
+INSERT 075 3tbon | home=22 probe=22 placed=22 active=75 m=197
+INSERT 076 9ka6e | home=148 probe=148 placed=148 active=76 m=197
+INSERT 077 cz941 | home=39 probe=39 placed=39 active=77 m=197
+INSERT 078 wf85r | home=161 probe=161 placed=161 active=78 m=197
+INSERT 079 f7lzc | home=12 probe=12->13->14->15->16->17->18 placed=18 active=79 m=197
+INSERT 080 g4q82 | home=14 probe=14->15->16->17->18->19 placed=19 active=80 m=197
+LOAD after  80 successful insertions | active=80 m=197 tombstones=0 | alpha=0.4061 occupied=0.4061
+INSERT 081 30enu | home=86 probe=86 placed=86 active=81 m=197
+INSERT 082 fjdym | home=63 probe=63->64->65 placed=65 active=82 m=197
+INSERT 083 6j36y | home=91 probe=91 placed=91 active=83 m=197
+INSERT 084 zmfdu | home=189 probe=189->190 placed=190 active=84 m=197
+INSERT 085 mnuws | home=64 probe=64->65->66->67 placed=67 active=85 m=197
+INSERT 086 yq2vf | home=4 probe=4 placed=4 active=86 m=197
+INSERT 087 ac6x2 | home=56 probe=56 placed=56 active=87 m=197
+INSERT 088 l8niq | home=193 probe=193->194 placed=194 active=88 m=197
+INSERT 089 556bg | home=33 probe=33->34 placed=34 active=89 m=197
+INSERT 090 wht9q | home=114 probe=114 placed=114 active=90 m=197
+LOAD after  90 successful insertions | active=90 m=197 tombstones=0 | alpha=0.4569 occupied=0.4569
+INSERT 091 4idpx | home=107 probe=107->108 placed=108 active=91 m=197
+INSERT 092 mcp73 | home=16 probe=16->17->18->19->20 placed=20 active=92 m=197
+INSERT 093 k11ch | home=184 probe=184->185 placed=185 active=93 m=197
+INSERT 094 sgtyv | home=149 probe=149 placed=149 active=94 m=197
+INSERT 095 a3l59 | home=94 probe=94 placed=94 active=95 m=197
+INSERT 096 h9d98 | home=174 probe=174->175 placed=175 active=96 m=197
+INSERT 097 17kfx | home=35 probe=35 placed=35 active=97 m=197
+INSERT 098 v2jbu | home=56 probe=56->57->58 placed=58 active=98 m=197
+INSERT 099 qlctx | home=63 probe=63->64->65->66->67->68 placed=68 active=99 m=197
+INSERT 100 hn2cl | home=135 probe=135->136->137->138->139 placed=139 active=100 m=197
+LOAD after 100 successful insertions | active=100 m=197 tombstones=0 | alpha=0.5076 occupied=0.5076
+INSERT 101 xejhz | home=97 probe=97 placed=97 active=101 m=197
+INSERT 102 pl4iq | home=70 probe=70 placed=70 active=102 m=197
+INSERT 103 633eh | home=96 probe=96 placed=96 active=103 m=197
+INSERT 104 85yvj | home=185 probe=185->186 placed=186 active=104 m=197
+INSERT 105 0txnb | home=87 probe=87->88 placed=88 active=105 m=197
+INSERT 106 mcv82 | home=99 probe=99->100->101 placed=101 active=106 m=197
+INSERT 107 le9z5 | home=169 probe=169 placed=169 active=107 m=197
+INSERT 108 x7jvy | home=82 probe=82 placed=82 active=108 m=197
+INSERT 109 mmffe | home=36 probe=36 placed=36 active=109 m=197
+INSERT 110 4t97p | home=45 probe=45 placed=45 active=110 m=197
+LOAD after 110 successful insertions | active=110 m=197 tombstones=0 | alpha=0.5584 occupied=0.5584
+INSERT 111 989q5 | home=54 probe=54 placed=54 active=111 m=197
+INSERT 112 vlz0s | home=81 probe=81->82->83->84 placed=84 active=112 m=197
+INSERT 113 56jwf | home=70 probe=70->71 placed=71 active=113 m=197
+INSERT 114 80z1b | home=158 probe=158 placed=158 active=114 m=197
+INSERT 115 3a8qd | home=49 probe=49->50->51 placed=51 active=115 m=197
+INSERT 116 ri1ua | home=139 probe=139->140->141 placed=141 active=116 m=197
+INSERT 117 z4oo9 | home=110 probe=110 placed=110 active=117 m=197
+INSERT 118 yd20s | home=33 probe=33->34->35->36->37->38 placed=38 active=118 m=197
+INSERT 119 24tju | home=187 probe=187 placed=187 active=119 m=197
+INSERT 120 58yzc | home=85 probe=85 placed=85 active=120 m=197
+LOAD after 120 successful insertions | active=120 m=197 tombstones=0 | alpha=0.6091 occupied=0.6091
+INSERT 121 kdhdc | home=149 probe=149->150 placed=150 active=121 m=197
+INSERT 122 gslqa | home=189 probe=189->190->191 placed=191 active=122 m=197
+INSERT 123 h9cp1 | home=123 probe=123->124->125 placed=125 active=123 m=197
+INSERT 124 doj25 | home=79 probe=79->80->81->82->83->84->85->86->87->88->89 placed=89 active=124 m=197
+INSERT 125 dsyit | home=87 probe=87->88->89->90->91->92 placed=92 active=125 m=197
+Final bulk state: Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+Bulk insertion probes=277 (includes pre-resize duplicate checks); mean=2.216.
+Internal rehash probes=167 are counted separately.
+
+SUCCESSFUL SEARCHES (complete first record shown)
+SEARCH 3d8af | home=81 m=197 | 81:OCCUPIED(3d8af) | FOUND slot=81
+Id: 3d8af
+Name: Kamarah Piggery
+Species: Pigs
+Lat: -31.141029
+Lng: 116.020905
+Street Num: 310
+Street: Wannamal Road W
+Suburb: Mindarra
+State: WA
+Postcode: 6503
+Country: Australia
+Categories: Farm (meat)
+Lat/Lng: -31.141029, 116.020905
+Address Override: [source blank]
+Last Known Status: Open
+Tags: [source blank]
+Owned By: E J And A R Howard
+Contracted To: [source blank]
+Map URL: https://www.farmtransparency.org/map?location=3d8af
+Profile URL: https://www.farmtransparency.org/facilities/3d8af-kamarah-piggery
+SEARCH 4mw8y | home=62 m=197 | 62:OCCUPIED(4mw8y) | FOUND slot=62
+Found 4mw8y | Marlo Piggery
+SEARCH dsyit | home=87 m=197 | 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) | FOUND slot=92
+Found dsyit | Westpork - Moora Piggery
+
+UNSUCCESSFUL SEARCH
+SEARCH zzzzz | home=180 m=197 | 180:OCCUPIED(71a14) -> 181:OCCUPIED(vpr67) -> 182:EMPTY | NOT_FOUND
+FarmID zzzzz not found.
+
+SUCCESSFUL DELETE AND SUBSEQUENT SEARCH
+DELETE 3d8af | home=81 m=197 | 81:OCCUPIED(3d8af) | DELETED slot=81
+Deleted 3d8af | Kamarah Piggery.
+Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+SEARCH 3d8af | home=81 m=197 | 81:DELETED -> 82:OCCUPIED(x7jvy) -> 83:OCCUPIED(409sd) -> 84:OCCUPIED(vlz0s) -> 85:OCCUPIED(58yzc) -> 86:OCCUPIED(30enu) -> 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) -> 93:EMPTY | NOT_FOUND
+FarmID 3d8af not found.
+SEARCH dsyit | home=87 m=197 | 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) | FOUND slot=92
+Id: dsyit
+Name: Westpork - Moora Piggery
+Species: Pigs
+Lat: -30.498178
+Lng: 115.881302
+Street Num: 898
+Street: Agaton Road
+Suburb: Dandaragan
+State: WA
+Postcode: 6507
+Country: Australia
+Categories: Farm (meat)
+Lat/Lng: -30.498178, 115.881302
+Address Override: [source blank]
+Last Known Status: Open
+Tags: [source blank]
+Owned By: [source blank]
+Contracted To: [source blank]
+Map URL: https://www.farmtransparency.org/map?location=dsyit
+Profile URL: https://www.farmtransparency.org/facilities/dsyit-westpork-moora-piggery
+
+UNSUCCESSFUL DELETION ATTEMPTS
+DELETE 3d8af | home=81 m=197 | 81:DELETED -> 82:OCCUPIED(x7jvy) -> 83:OCCUPIED(409sd) -> 84:OCCUPIED(vlz0s) -> 85:OCCUPIED(58yzc) -> 86:OCCUPIED(30enu) -> 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) -> 93:EMPTY | NOT_FOUND
+FarmID 3d8af not found; nothing deleted.
+Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+DELETE zzzzz | home=180 m=197 | 180:OCCUPIED(71a14) -> 181:OCCUPIED(vpr67) -> 182:EMPTY | NOT_FOUND
+FarmID zzzzz not found; nothing deleted.
+Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+
+DUPLICATE INSERT AND INVALID-INPUT VALIDATION
+INSERT dsyit | home=87 m=197 | 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) | DUPLICATE slot=92
+Duplicate FarmID dsyit: existing record retained.
+Validation error handled: Invalid FarmID: 'BAD ID'. Use exactly five lowercase letters/digits.
+Validation error handled: Invalid FarmID: ''. Use exactly five lowercase letters/digits.
+Validation error handled: Name must not be blank.
+Validation error handled: Invalid latitude: 'not a number'.
+Validation error handled: Invalid latitude: nan.
+Validation error handled: Invalid longitude: 181.
+Final demonstration state: Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4

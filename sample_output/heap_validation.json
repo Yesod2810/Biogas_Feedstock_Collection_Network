@@ -1,0 +1,1897 @@
+{
+  "network": "test",
+  "formula": "F / (T + 1 minute)",
+  "feedstock_unit": "tonnes",
+  "main_insertions": 10,
+  "main_extractions": 10,
+  "main_collected": 10,
+  "main_heap_states": [
+    {
+      "operation": "INSERT",
+      "RequestID": "C001",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C002",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C003",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C004",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          3,
+          1
+        ]
+      ]
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C005",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C006",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C007",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C008",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C008",
+          "FarmID": "c6e42",
+          "Name": "Tralka Pty Ltd",
+          "EstimatedFeedstock": 24.0,
+          "TransportTime": 39.0,
+          "CollectionPriority": 0.6,
+          "Path": [
+            "c6e42",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C009",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C008",
+          "FarmID": "c6e42",
+          "Name": "Tralka Pty Ltd",
+          "EstimatedFeedstock": 24.0,
+          "TransportTime": 39.0,
+          "CollectionPriority": 0.6,
+          "Path": [
+            "c6e42",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "INSERT",
+      "RequestID": "C010",
+      "array": [
+        {
+          "RequestID": "C001",
+          "FarmID": "doj25",
+          "Name": "Westpork - Pinjarra Piggery",
+          "EstimatedFeedstock": 11.0,
+          "TransportTime": 10.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C008",
+          "FarmID": "c6e42",
+          "Name": "Tralka Pty Ltd",
+          "EstimatedFeedstock": 24.0,
+          "TransportTime": 39.0,
+          "CollectionPriority": 0.6,
+          "Path": [
+            "c6e42",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          9,
+          4
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C001",
+      "array": [
+        {
+          "RequestID": "C004",
+          "FarmID": "bcdff",
+          "Name": "Nambeelup Piggery",
+          "EstimatedFeedstock": 21.0,
+          "TransportTime": 20.0,
+          "CollectionPriority": 1.0,
+          "Path": [
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C008",
+          "FarmID": "c6e42",
+          "Name": "Tralka Pty Ltd",
+          "EstimatedFeedstock": 24.0,
+          "TransportTime": 39.0,
+          "CollectionPriority": 0.6,
+          "Path": [
+            "c6e42",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          7
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C004",
+      "array": [
+        {
+          "RequestID": "C003",
+          "FarmID": "974d7",
+          "Name": "Pindari Piggery",
+          "EstimatedFeedstock": 15.0,
+          "TransportTime": 19.0,
+          "CollectionPriority": 0.75,
+          "Path": [
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C008",
+          "FarmID": "c6e42",
+          "Name": "Tralka Pty Ltd",
+          "EstimatedFeedstock": 24.0,
+          "TransportTime": 39.0,
+          "CollectionPriority": 0.6,
+          "Path": [
+            "c6e42",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          5
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C003",
+      "array": [
+        {
+          "RequestID": "C008",
+          "FarmID": "c6e42",
+          "Name": "Tralka Pty Ltd",
+          "EstimatedFeedstock": 24.0,
+          "TransportTime": 39.0,
+          "CollectionPriority": 0.6,
+          "Path": [
+            "c6e42",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C008",
+      "array": [
+        {
+          "RequestID": "C002",
+          "FarmID": "c96c9",
+          "Name": "GD Pork Piggery",
+          "EstimatedFeedstock": 8.0,
+          "TransportTime": 15.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C002",
+      "array": [
+        {
+          "RequestID": "C006",
+          "FarmID": "c81cd",
+          "Name": "Charla Downs Feedlot",
+          "EstimatedFeedstock": 15.5,
+          "TransportTime": 30.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C006",
+      "array": [
+        {
+          "RequestID": "C007",
+          "FarmID": "0bfa4",
+          "Name": "Unknown",
+          "EstimatedFeedstock": 16.5,
+          "TransportTime": 32.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "0bfa4",
+            "c96c9",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C007",
+      "array": [
+        {
+          "RequestID": "C009",
+          "FarmID": "1cc85",
+          "Name": "Karnet Prison Farm",
+          "EstimatedFeedstock": 25.5,
+          "TransportTime": 50.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "1cc85",
+            "bcdff",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          2
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C009",
+      "array": [
+        {
+          "RequestID": "C010",
+          "FarmID": "f4386",
+          "Name": "Peel Pork Piggery",
+          "EstimatedFeedstock": 27.5,
+          "TransportTime": 54.0,
+          "CollectionPriority": 0.5,
+          "Path": [
+            "f4386",
+            "c81cd",
+            "HUB_PINJARRA"
+          ]
+        },
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C010",
+      "array": [
+        {
+          "RequestID": "C005",
+          "FarmID": "56jwf",
+          "Name": "Unknown Feedlot",
+          "EstimatedFeedstock": 6.0,
+          "TransportTime": 23.0,
+          "CollectionPriority": 0.25,
+          "Path": [
+            "56jwf",
+            "974d7",
+            "doj25",
+            "HUB_PINJARRA"
+          ]
+        }
+      ],
+      "swaps": []
+    },
+    {
+      "operation": "EXTRACT",
+      "RequestID": "C005",
+      "array": [],
+      "swaps": []
+    },
+    {
+      "operation": "EXTRACT_EMPTY",
+      "RequestID": "",
+      "array": [],
+      "swaps": []
+    }
+  ],
+  "accepted_requests": [
+    {
+      "RequestID": "C001",
+      "FarmID": "doj25",
+      "Name": "Westpork - Pinjarra Piggery",
+      "EstimatedFeedstock": 11.0,
+      "TransportTime": 10.0,
+      "CollectionPriority": 1.0,
+      "Path": [
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C002",
+      "FarmID": "c96c9",
+      "Name": "GD Pork Piggery",
+      "EstimatedFeedstock": 8.0,
+      "TransportTime": 15.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "c96c9",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C003",
+      "FarmID": "974d7",
+      "Name": "Pindari Piggery",
+      "EstimatedFeedstock": 15.0,
+      "TransportTime": 19.0,
+      "CollectionPriority": 0.75,
+      "Path": [
+        "974d7",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C004",
+      "FarmID": "bcdff",
+      "Name": "Nambeelup Piggery",
+      "EstimatedFeedstock": 21.0,
+      "TransportTime": 20.0,
+      "CollectionPriority": 1.0,
+      "Path": [
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C005",
+      "FarmID": "56jwf",
+      "Name": "Unknown Feedlot",
+      "EstimatedFeedstock": 6.0,
+      "TransportTime": 23.0,
+      "CollectionPriority": 0.25,
+      "Path": [
+        "56jwf",
+        "974d7",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C006",
+      "FarmID": "c81cd",
+      "Name": "Charla Downs Feedlot",
+      "EstimatedFeedstock": 15.5,
+      "TransportTime": 30.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "c81cd",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C007",
+      "FarmID": "0bfa4",
+      "Name": "Unknown",
+      "EstimatedFeedstock": 16.5,
+      "TransportTime": 32.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "0bfa4",
+        "c96c9",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C008",
+      "FarmID": "c6e42",
+      "Name": "Tralka Pty Ltd",
+      "EstimatedFeedstock": 24.0,
+      "TransportTime": 39.0,
+      "CollectionPriority": 0.6,
+      "Path": [
+        "c6e42",
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C009",
+      "FarmID": "1cc85",
+      "Name": "Karnet Prison Farm",
+      "EstimatedFeedstock": 25.5,
+      "TransportTime": 50.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "1cc85",
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C010",
+      "FarmID": "f4386",
+      "Name": "Peel Pork Piggery",
+      "EstimatedFeedstock": 27.5,
+      "TransportTime": 54.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "f4386",
+        "c81cd",
+        "HUB_PINJARRA"
+      ]
+    }
+  ],
+  "collection_order": [
+    {
+      "RequestID": "C001",
+      "FarmID": "doj25",
+      "Name": "Westpork - Pinjarra Piggery",
+      "EstimatedFeedstock": 11.0,
+      "TransportTime": 10.0,
+      "CollectionPriority": 1.0,
+      "Path": [
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C004",
+      "FarmID": "bcdff",
+      "Name": "Nambeelup Piggery",
+      "EstimatedFeedstock": 21.0,
+      "TransportTime": 20.0,
+      "CollectionPriority": 1.0,
+      "Path": [
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C003",
+      "FarmID": "974d7",
+      "Name": "Pindari Piggery",
+      "EstimatedFeedstock": 15.0,
+      "TransportTime": 19.0,
+      "CollectionPriority": 0.75,
+      "Path": [
+        "974d7",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C008",
+      "FarmID": "c6e42",
+      "Name": "Tralka Pty Ltd",
+      "EstimatedFeedstock": 24.0,
+      "TransportTime": 39.0,
+      "CollectionPriority": 0.6,
+      "Path": [
+        "c6e42",
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C002",
+      "FarmID": "c96c9",
+      "Name": "GD Pork Piggery",
+      "EstimatedFeedstock": 8.0,
+      "TransportTime": 15.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "c96c9",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C006",
+      "FarmID": "c81cd",
+      "Name": "Charla Downs Feedlot",
+      "EstimatedFeedstock": 15.5,
+      "TransportTime": 30.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "c81cd",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C007",
+      "FarmID": "0bfa4",
+      "Name": "Unknown",
+      "EstimatedFeedstock": 16.5,
+      "TransportTime": 32.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "0bfa4",
+        "c96c9",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C009",
+      "FarmID": "1cc85",
+      "Name": "Karnet Prison Farm",
+      "EstimatedFeedstock": 25.5,
+      "TransportTime": 50.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "1cc85",
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C010",
+      "FarmID": "f4386",
+      "Name": "Peel Pork Piggery",
+      "EstimatedFeedstock": 27.5,
+      "TransportTime": 54.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "f4386",
+        "c81cd",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C005",
+      "FarmID": "56jwf",
+      "Name": "Unknown Feedlot",
+      "EstimatedFeedstock": 6.0,
+      "TransportTime": 23.0,
+      "CollectionPriority": 0.25,
+      "Path": [
+        "56jwf",
+        "974d7",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    }
+  ],
+  "rejections": [
+    {
+      "RequestID": "C001",
+      "FarmID": "doj25",
+      "EstimatedFeedstock": "11",
+      "reason": "Duplicate collection RequestID C001."
+    },
+    {
+      "RequestID": "C011",
+      "FarmID": "doj25",
+      "EstimatedFeedstock": "5",
+      "reason": "Farm doj25 already has a pending collection request."
+    },
+    {
+      "RequestID": "E001",
+      "FarmID": "gslqa",
+      "EstimatedFeedstock": "8",
+      "reason": "Unreachable farm gslqa: a valid collection route cannot currently be calculated."
+    },
+    {
+      "RequestID": "E002",
+      "FarmID": "BAD_ID",
+      "EstimatedFeedstock": "5",
+      "reason": "Invalid FarmID: 'BAD_ID'. Use exactly five lowercase letters/digits."
+    },
+    {
+      "RequestID": "E003",
+      "FarmID": "zzzzz",
+      "EstimatedFeedstock": "5",
+      "reason": "Farm record zzzzz is missing or has been deleted from the hash table."
+    },
+    {
+      "RequestID": "E004",
+      "FarmID": "c96c9",
+      "EstimatedFeedstock": "",
+      "reason": "EstimatedFeedstock must be a finite number."
+    },
+    {
+      "RequestID": "E005",
+      "FarmID": "c96c9",
+      "EstimatedFeedstock": "-4",
+      "reason": "EstimatedFeedstock must be greater than zero tonnes."
+    },
+    {
+      "RequestID": "E006",
+      "FarmID": "c96c9",
+      "EstimatedFeedstock": "0",
+      "reason": "EstimatedFeedstock must be greater than zero tonnes."
+    },
+    {
+      "RequestID": "E007",
+      "FarmID": "c96c9",
+      "EstimatedFeedstock": "nan",
+      "reason": "EstimatedFeedstock must be a finite number."
+    },
+    {
+      "RequestID": "E008",
+      "FarmID": "c96c9",
+      "EstimatedFeedstock": "many",
+      "reason": "EstimatedFeedstock must be a finite number."
+    }
+  ],
+  "peek_preserves_heap": true,
+  "deleted_before_insert_rejected": true,
+  "deleted_after_queue_skipped": [
+    [
+      "STALE01",
+      "doj25",
+      "farm record missing/deleted from the hash table"
+    ]
+  ],
+  "survivor_after_stale_removal": "LIVE01",
+  "zero_time_fixture": {
+    "RequestID": "ZERO01",
+    "FarmID": "doj25",
+    "Name": "Westpork - Pinjarra Piggery",
+    "EstimatedFeedstock": 5.0,
+    "TransportTime": 0.0,
+    "CollectionPriority": 5.0,
+    "Path": [
+      "doj25"
+    ]
+  },
+  "heap_traces": [
+    "MAIN\nHEAP after INSERT C001 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n]",
+    "MAIN\nHEAP after INSERT C002 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C002 | farm=c96c9 | P=0.500000\n]",
+    "MAIN\nHEAP after INSERT C003 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C002 | farm=c96c9 | P=0.500000\n  2: C003 | farm=974d7 | P=0.750000\n]",
+    "MAIN\nHEAP after INSERT C004 | swaps=3<->1\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C002 | farm=c96c9 | P=0.500000\n]",
+    "MAIN\nHEAP after INSERT C005 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C002 | farm=c96c9 | P=0.500000\n  4: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after INSERT C006 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C002 | farm=c96c9 | P=0.500000\n  4: C005 | farm=56jwf | P=0.250000\n  5: C006 | farm=c81cd | P=0.500000\n]",
+    "MAIN\nHEAP after INSERT C007 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C002 | farm=c96c9 | P=0.500000\n  4: C005 | farm=56jwf | P=0.250000\n  5: C006 | farm=c81cd | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n]",
+    "MAIN\nHEAP after INSERT C008 | swaps=7<->3\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C008 | farm=c6e42 | P=0.600000\n  4: C005 | farm=56jwf | P=0.250000\n  5: C006 | farm=c81cd | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n  7: C002 | farm=c96c9 | P=0.500000\n]",
+    "MAIN\nHEAP after INSERT C009 | swaps=none\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C008 | farm=c6e42 | P=0.600000\n  4: C005 | farm=56jwf | P=0.250000\n  5: C006 | farm=c81cd | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n  7: C002 | farm=c96c9 | P=0.500000\n  8: C009 | farm=1cc85 | P=0.500000\n]",
+    "MAIN\nHEAP after INSERT C010 | swaps=9<->4\n[\n  0: C001 | farm=doj25 | P=1.000000\n  1: C004 | farm=bcdff | P=1.000000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C008 | farm=c6e42 | P=0.600000\n  4: C010 | farm=f4386 | P=0.500000\n  5: C006 | farm=c81cd | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n  7: C002 | farm=c96c9 | P=0.500000\n  8: C009 | farm=1cc85 | P=0.500000\n  9: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after EXTRACT C001 | swaps=0<->1, 1<->3, 3<->7\n[\n  0: C004 | farm=bcdff | P=1.000000\n  1: C008 | farm=c6e42 | P=0.600000\n  2: C003 | farm=974d7 | P=0.750000\n  3: C002 | farm=c96c9 | P=0.500000\n  4: C010 | farm=f4386 | P=0.500000\n  5: C006 | farm=c81cd | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n  7: C005 | farm=56jwf | P=0.250000\n  8: C009 | farm=1cc85 | P=0.500000\n]",
+    "MAIN\nHEAP after EXTRACT C004 | swaps=0<->2, 2<->5\n[\n  0: C003 | farm=974d7 | P=0.750000\n  1: C008 | farm=c6e42 | P=0.600000\n  2: C006 | farm=c81cd | P=0.500000\n  3: C002 | farm=c96c9 | P=0.500000\n  4: C010 | farm=f4386 | P=0.500000\n  5: C009 | farm=1cc85 | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n  7: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after EXTRACT C003 | swaps=0<->1, 1<->3\n[\n  0: C008 | farm=c6e42 | P=0.600000\n  1: C002 | farm=c96c9 | P=0.500000\n  2: C006 | farm=c81cd | P=0.500000\n  3: C005 | farm=56jwf | P=0.250000\n  4: C010 | farm=f4386 | P=0.500000\n  5: C009 | farm=1cc85 | P=0.500000\n  6: C007 | farm=0bfa4 | P=0.500000\n]",
+    "MAIN\nHEAP after EXTRACT C008 | swaps=0<->1\n[\n  0: C002 | farm=c96c9 | P=0.500000\n  1: C007 | farm=0bfa4 | P=0.500000\n  2: C006 | farm=c81cd | P=0.500000\n  3: C005 | farm=56jwf | P=0.250000\n  4: C010 | farm=f4386 | P=0.500000\n  5: C009 | farm=1cc85 | P=0.500000\n]",
+    "MAIN\nHEAP after EXTRACT C002 | swaps=0<->2\n[\n  0: C006 | farm=c81cd | P=0.500000\n  1: C007 | farm=0bfa4 | P=0.500000\n  2: C009 | farm=1cc85 | P=0.500000\n  3: C005 | farm=56jwf | P=0.250000\n  4: C010 | farm=f4386 | P=0.500000\n]",
+    "MAIN\nHEAP after EXTRACT C006 | swaps=0<->1\n[\n  0: C007 | farm=0bfa4 | P=0.500000\n  1: C010 | farm=f4386 | P=0.500000\n  2: C009 | farm=1cc85 | P=0.500000\n  3: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after EXTRACT C007 | swaps=0<->2\n[\n  0: C009 | farm=1cc85 | P=0.500000\n  1: C010 | farm=f4386 | P=0.500000\n  2: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after EXTRACT C009 | swaps=0<->1\n[\n  0: C010 | farm=f4386 | P=0.500000\n  1: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after EXTRACT C010 | swaps=none\n[\n  0: C005 | farm=56jwf | P=0.250000\n]",
+    "MAIN\nHEAP after EXTRACT C005 | swaps=none\n[]",
+    "MAIN\nHEAP after EXTRACT (empty) | swaps=none\n[]",
+    "HASH RECORD DELETED AFTER QUEUING\nHEAP after INSERT STALE01 | swaps=none\n[\n  0: STALE01 | farm=doj25 | P=1.000000\n]",
+    "HASH RECORD DELETED AFTER QUEUING\nHEAP after INSERT LIVE01 | swaps=none\n[\n  0: STALE01 | farm=doj25 | P=1.000000\n  1: LIVE01 | farm=c96c9 | P=0.062500\n]",
+    "HASH RECORD DELETED AFTER QUEUING\nHEAP after EXTRACT STALE01 | swaps=none\n[\n  0: LIVE01 | farm=c96c9 | P=0.062500\n]",
+    "HASH RECORD DELETED AFTER QUEUING\nHEAP after EXTRACT LIVE01 | swaps=none\n[]",
+    "ZERO-TIME COLOCATION FIXTURE\nHEAP after INSERT ZERO01 | swaps=none\n[\n  0: ZERO01 | farm=doj25 | P=5.000000\n]",
+    "ZERO-TIME COLOCATION FIXTURE\nHEAP after EXTRACT ZERO01 | swaps=none\n[]"
+  ]
+}

@@ -1,0 +1,180 @@
+REPRODUCIBLE HASH MENU SESSION
+Answers in order:
+'2\n3d8af\n2\nzzzzz\n4\n3d8af\n2\n3d8af\n4\n3d8af\n3\n3d8af\n2\n3d8af\n3\n3d8af\n2\nBAD ID\n0\n'
+
+CSV IMPORT CHECKPOINTS (each ten successful insertions)
+LOAD after  10 successful insertions | active=10 m=23 tombstones=0 | alpha=0.4348 occupied=0.4348
+LOAD after  20 successful insertions | active=20 m=47 tombstones=0 | alpha=0.4255 occupied=0.4255
+LOAD after  30 successful insertions | active=30 m=47 tombstones=0 | alpha=0.6383 occupied=0.6383
+LOAD after  40 successful insertions | active=40 m=97 tombstones=0 | alpha=0.4124 occupied=0.4124
+LOAD after  50 successful insertions | active=50 m=97 tombstones=0 | alpha=0.5155 occupied=0.5155
+LOAD after  60 successful insertions | active=60 m=97 tombstones=0 | alpha=0.6186 occupied=0.6186
+LOAD after  70 successful insertions | active=70 m=197 tombstones=0 | alpha=0.3553 occupied=0.3553
+LOAD after  80 successful insertions | active=80 m=197 tombstones=0 | alpha=0.4061 occupied=0.4061
+LOAD after  90 successful insertions | active=90 m=197 tombstones=0 | alpha=0.4569 occupied=0.4569
+LOAD after 100 successful insertions | active=100 m=197 tombstones=0 | alpha=0.5076 occupied=0.5076
+LOAD after 110 successful insertions | active=110 m=197 tombstones=0 | alpha=0.5584 occupied=0.5584
+LOAD after 120 successful insertions | active=120 m=197 tombstones=0 | alpha=0.6091 occupied=0.6091
+GROW before insertion 8: 11 -> 23 slots | moved=7 removed_tombstones=0 rehash_probes=12 | Projected active load would exceed 0.70
+GROW before insertion 17: 23 -> 47 slots | moved=16 removed_tombstones=0 rehash_probes=34 | Projected active load would exceed 0.70
+GROW before insertion 33: 47 -> 97 slots | moved=32 removed_tombstones=0 rehash_probes=37 | Projected active load would exceed 0.70
+GROW before insertion 68: 97 -> 197 slots | moved=67 removed_tombstones=0 rehash_probes=84 | Projected active load would exceed 0.70
+Current session: Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: SEARCH 3d8af | home=81 m=197 | 81:OCCUPIED(3d8af) | FOUND slot=81
+Id: 3d8af
+Name: Kamarah Piggery
+Species: Pigs
+Lat: -31.141029
+Lng: 116.020905
+Street Num: 310
+Street: Wannamal Road W
+Suburb: Mindarra
+State: WA
+Postcode: 6503
+Country: Australia
+Categories: Farm (meat)
+Lat/Lng: -31.141029, 116.020905
+Address Override: [source blank]
+Last Known Status: Open
+Tags: [source blank]
+Owned By: E J And A R Howard
+Contracted To: [source blank]
+Map URL: https://www.farmtransparency.org/map?location=3d8af
+Profile URL: https://www.farmtransparency.org/facilities/3d8af-kamarah-piggery
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: SEARCH zzzzz | home=180 m=197 | 180:OCCUPIED(71a14) -> 181:OCCUPIED(vpr67) -> 182:EMPTY | NOT_FOUND
+FarmID zzzzz not found.
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: DELETE 3d8af | home=81 m=197 | 81:OCCUPIED(3d8af) | DELETED slot=81
+Deleted 3d8af | Kamarah Piggery.
+Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+
+COMP5008 - MODULE 2 | Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: SEARCH 3d8af | home=81 m=197 | 81:DELETED -> 82:OCCUPIED(x7jvy) -> 83:OCCUPIED(409sd) -> 84:OCCUPIED(vlz0s) -> 85:OCCUPIED(58yzc) -> 86:OCCUPIED(30enu) -> 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) -> 93:EMPTY | NOT_FOUND
+FarmID 3d8af not found.
+
+COMP5008 - MODULE 2 | Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: DELETE 3d8af | home=81 m=197 | 81:DELETED -> 82:OCCUPIED(x7jvy) -> 83:OCCUPIED(409sd) -> 84:OCCUPIED(vlz0s) -> 85:OCCUPIED(58yzc) -> 86:OCCUPIED(30enu) -> 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) -> 93:EMPTY | NOT_FOUND
+FarmID 3d8af not found; nothing deleted.
+Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+
+COMP5008 - MODULE 2 | Records=124 | slots=197 | tombstones=1 | alpha=0.6294 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=125 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID from dataset.csv: INSERT 3d8af | home=81 m=197 | 81:DELETED -> 82:OCCUPIED(x7jvy) -> 83:OCCUPIED(409sd) -> 84:OCCUPIED(vlz0s) -> 85:OCCUPIED(58yzc) -> 86:OCCUPIED(30enu) -> 87:OCCUPIED(5b8ef) -> 88:OCCUPIED(0txnb) -> 89:OCCUPIED(doj25) -> 90:OCCUPIED(1d900) -> 91:OCCUPIED(6j36y) -> 92:OCCUPIED(dsyit) -> 93:EMPTY | INSERTED slot=81
+Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=126 | rehashes=4
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=126 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: SEARCH 3d8af | home=81 m=197 | 81:OCCUPIED(3d8af) | FOUND slot=81
+Id: 3d8af
+Name: Kamarah Piggery
+Species: Pigs
+Lat: -31.141029
+Lng: 116.020905
+Street Num: 310
+Street: Wannamal Road W
+Suburb: Mindarra
+State: WA
+Postcode: 6503
+Country: Australia
+Categories: Farm (meat)
+Lat/Lng: -31.141029, 116.020905
+Address Override: [source blank]
+Last Known Status: Open
+Tags: [source blank]
+Owned By: E J And A R Howard
+Contracted To: [source blank]
+Map URL: https://www.farmtransparency.org/map?location=3d8af
+Profile URL: https://www.farmtransparency.org/facilities/3d8af-kamarah-piggery
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=126 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID from dataset.csv: Error: Duplicate FarmID 3d8af: existing record retained.
+INSERT 3d8af | home=81 m=197 | 81:OCCUPIED(3d8af) | DUPLICATE slot=81
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=126 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: FarmID: Error: Invalid FarmID: 'BAD ID'. Use exactly five lowercase letters/digits.
+
+COMP5008 - MODULE 2 | Records=125 | slots=197 | tombstones=0 | alpha=0.6345 | occupied=0.6345 | thresholds=0.70/0.85 | successful_insertions=126 | rehashes=4
+1. Display hash-table summary and original import checkpoints
+2. Search FarmID (complete record and probe sequence)
+3. Insert/reinsert a real farm from dataset.csv
+4. Delete FarmID
+5. Show slot states (including tombstones)
+6. Run the independent Module 2 demonstration
+7. Reload dataset.csv (resets hash-session changes)
+0. Leave Module 2
+Choose a hash option: Leaving Module 2.

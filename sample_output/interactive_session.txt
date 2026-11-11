@@ -1,0 +1,228 @@
+REPRODUCIBLE MENU SESSION
+Prompts and actual stdout; terminal-piped answers are not echoed.
+Answers in order:
+'1\n3\n\n4\n\n5\n\nf4386\n5\n\ngslqa\n5\n\nNOT_A_LOCATION\n7\nHUB_PINJARRA\ndoj25\n5\n6\n3d8af\n7\nHUB_PINJARRA\n3d8af\n25\n5\n\n3d8af\n0\n'
+
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: TEST-GRAPH SPECIFICATION (Section 4.2.5)
+Vertices: 12 | Undirected edges: 18
+PASS: At least 10 vertices
+PASS: At least 12 undirected weighted edges
+PASS: At least one cycle
+PASS: At least one disconnected or isolated location
+PASS: All edge weights are finite and positive
+HUB_PINJARRA | Proposed Pinjarra Biogas Hub | Pinjarra
+doj25 | Westpork - Pinjarra Piggery | West Pinjarra
+c96c9 | GD Pork Piggery | West Pinjarra
+974d7 | Pindari Piggery | Nirimba
+bcdff | Nambeelup Piggery | Nambeelup
+56jwf | Unknown Feedlot | Nirimba
+c81cd | Charla Downs Feedlot | Waroona
+0bfa4 | Unknown | Waroona
+c6e42 | Tralka Pty Ltd | Hopeland
+1cc85 | Karnet Prison Farm | Keysbrook
+f4386 | Peel Pork Piggery | Yarloop
+gslqa | Chapman Valley Feedlot | East Chapman
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Source ID (Enter for HUB_PINJARRA): BFS from Proposed Pinjarra Biogas Hub [HUB_PINJARRA]
+Levels count edges, not weighted transport minutes.
+Level 0: Proposed Pinjarra Biogas Hub [HUB_PINJARRA]
+Level 1: Westpork - Pinjarra Piggery [doj25]; Nambeelup Piggery [bcdff]; Charla Downs Feedlot [c81cd]
+Level 2: GD Pork Piggery [c96c9]; Pindari Piggery [974d7]; Tralka Pty Ltd [c6e42]; Karnet Prison Farm [1cc85]; Unknown [0bfa4]; Peel Pork Piggery [f4386]
+Level 3: Unknown Feedlot [56jwf]
+Unreachable: Chapman Valley Feedlot [gslqa]
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Source ID (Enter for HUB_PINJARRA): DFS starting at Proposed Pinjarra Biogas Hub [HUB_PINJARRA] (whole graph)
+Cycle exists: YES
+Detected cycle: Westpork - Pinjarra Piggery [doj25] -> GD Pork Piggery [c96c9] -> Pindari Piggery [974d7] -> Westpork - Pinjarra Piggery [doj25]
+Component 1: HUB_PINJARRA -> doj25 -> c96c9 -> 974d7 -> 56jwf -> 0bfa4 -> c81cd -> f4386 -> bcdff -> c6e42 -> 1cc85
+Component 2: gslqa
+Visited 12 of 12 locations.
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Source ID (Enter for HUB_PINJARRA): Destination ID: Dijkstra: Proposed Pinjarra Biogas Hub [HUB_PINJARRA] -> Peel Pork Piggery [f4386]
+Path: Proposed Pinjarra Biogas Hub [HUB_PINJARRA] -> Charla Downs Feedlot [c81cd] -> Peel Pork Piggery [f4386]
+Shortest transportation time: 54 minutes
+Leg times: 30 + 24 = 54 minutes
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Source ID (Enter for HUB_PINJARRA): Destination ID: Dijkstra: Proposed Pinjarra Biogas Hub [HUB_PINJARRA] -> Chapman Valley Feedlot [gslqa]
+Unreachable location: no transportation route exists.
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Source ID (Enter for HUB_PINJARRA): Destination ID: Error: Invalid location ID: 'NOT_A_LOCATION'.
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: First location ID: Second location ID: Estimated transport time in minutes (> 0): Error: Duplicate undirected edge: HUB_PINJARRA <-> doj25.
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 12 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: FarmID from dataset.csv: Inserted 3d8af as an isolated location in this session.
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 13 vertices, 18 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: First location ID: Second location ID: Estimated transport time in minutes (> 0): Inserted HUB_PINJARRA <-> 3d8af (25 min) in both directions.
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 13 vertices, 19 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Source ID (Enter for HUB_PINJARRA): Destination ID: Dijkstra: Proposed Pinjarra Biogas Hub [HUB_PINJARRA] -> Kamarah Piggery [3d8af]
+Path: Proposed Pinjarra Biogas Hub [HUB_PINJARRA] -> Kamarah Piggery [3d8af]
+Shortest transportation time: 25 minutes
+Leg times: 25 = 25 minutes
+
+COMP5008 - INTEGRATED SYSTEM | TEST | 13 vertices, 19 edges
+1. List locations and check the test-graph specification
+2. Display the adjacency-list graph
+3. BFS levels
+4. DFS cycle detection (all components)
+5. Dijkstra shortest route
+6. Insert a farm from dataset.csv into this session
+7. Insert a weighted undirected edge into this session
+8. Reload test or full network (resets graph and scheduling sessions)
+9. Run all demonstration outputs
+10. Module 2: hash-based farm lookup
+11. Module 3: heap-based collection scheduling
+12. Module 4: sorted collection database and sorting benchmarks
+13. Run the end-to-end four-module demonstration (fresh session)
+0. Exit
+Choose an option: Goodbye.

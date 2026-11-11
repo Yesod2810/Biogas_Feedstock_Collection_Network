@@ -1,0 +1,6 @@
+FarmID,Name,CheckedDate,SourceURL,VerificationScope,Result
+bcdff,Nambeelup Piggery,2026-09-19,https://www.farmtransparency.org/facilities/bcdff-nambeelup-piggery,Listing ID and name and WA locality,Confirmed; current address presentation differs from supplied snapshot
+c96c9,GD Pork Piggery,2026-09-19,https://www.farmtransparency.org/facilities/c96c9-gd-pork-piggery,Listing ID and name and West Pinjarra locality,Confirmed
+60e63,Lake Preston Cattle Feedlot,2026-09-19,https://www.farmtransparency.org/facilities/60e63-lake-preston-cattle-feedlot,Restored listing ID and name and Myalup locality,Confirmed; current listing displays a street number absent from supplied snapshot
+65e30,Paradise Beef Cattle Feedlot,2026-09-19,https://www.farmtransparency.org/facilities/65e30-paradise-beef-cattle-feedlot,Restored listing ID and name and Paynedale locality,Confirmed
+80e05,Twyata Pool Feedlot,2026-09-19,https://www.farmtransparency.org/facilities?state=WA,Restored listing ID and name and Badgingarra locality on public listing page,Confirmed on WA listing; direct profile retrieval unavailable

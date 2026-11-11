@@ -1,0 +1,50 @@
+{
+  "scope": "Final integration brief, Sections 3-8 and nine-section report template",
+  "test_status": "PASS",
+  "tests": 239,
+  "tests_by_area": {
+    "module1": 62,
+    "module2": 52,
+    "module3": 63,
+    "module4": 54,
+    "integration": 8
+  },
+  "required_module_directories": [
+    "module1_graph",
+    "module2_hash",
+    "module3_heap",
+    "module4_sorting"
+  ],
+  "all_module_directories_present": true,
+  "python_files_with_author_date_purpose": 47,
+  "uml_files": [
+    "docs/module_integration_uml.puml",
+    "docs/module_integration_uml.svg",
+    "docs/module_integration_uml.png"
+  ],
+  "report": {
+    "total_pages": 18,
+    "declaration_pages": 1,
+    "main_pages": 15,
+    "references_pages": 1,
+    "appendix_pages": 1,
+    "A4": true,
+    "nine_required_sections": true,
+    "page_limit_passed": true,
+    "rendered_and_visually_reviewed": true
+  },
+  "source_sha256": "ff6b9366c5ec30614d490a435b63fa32230ce3f26072c2943f8e4524dceb838d",
+  "source_bytes_preserved": true,
+  "integration": {
+    "test_count": 8,
+    "same_instance_checks_passed": true,
+    "accepted": 10,
+    "collected": 10,
+    "deleted_farm_scenario_collected": 9,
+    "deleted_farm_scenario_skipped": 1,
+    "all_checks_passed": true
+  },
+  "sorting_cases": 9,
+  "sorting_outputs": 18,
+  "revised_unit_tests_expected": 239
+}

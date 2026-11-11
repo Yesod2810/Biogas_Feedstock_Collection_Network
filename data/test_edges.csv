@@ -1,0 +1,19 @@
+FromID,ToID,TransportTime,GreatCircleKm,RoadFactor,SpeedKmh,Reason
+HUB_PINJARRA,doj25,10,7.015552184,1.3,60.0,Explicit demonstration connection
+HUB_PINJARRA,bcdff,20,15.243206564,1.3,60.0,Explicit demonstration connection
+HUB_PINJARRA,c81cd,30,22.499382766,1.3,60.0,Explicit demonstration connection
+doj25,c96c9,5,3.209763780,1.3,60.0,Explicit demonstration connection
+doj25,974d7,9,6.678457661,1.3,60.0,Explicit demonstration connection
+c96c9,974d7,7,5.070754463,1.3,60.0,Explicit demonstration connection
+974d7,56jwf,4,2.357778029,1.3,60.0,Explicit demonstration connection
+c96c9,56jwf,10,7.416953403,1.3,60.0,Explicit demonstration connection
+bcdff,c6e42,19,13.987505885,1.3,60.0,Explicit demonstration connection
+c6e42,1cc85,21,15.685015866,1.3,60.0,Explicit demonstration connection
+bcdff,1cc85,30,23.005007454,1.3,60.0,Explicit demonstration connection
+bcdff,doj25,27,20.275211031,1.3,60.0,Explicit demonstration connection
+c81cd,0bfa4,15,10.976418373,1.3,60.0,Explicit demonstration connection
+0bfa4,56jwf,19,14.356481839,1.3,60.0,Explicit demonstration connection
+c81cd,f4386,24,17.745373575,1.3,60.0,Explicit demonstration connection
+0bfa4,f4386,22,16.560530751,1.3,60.0,Explicit demonstration connection
+974d7,c81cd,26,19.684633629,1.3,60.0,Explicit demonstration connection
+c96c9,0bfa4,17,12.866818544,1.3,60.0,Explicit demonstration connection

@@ -1,0 +1,190 @@
+{
+  "network": "test",
+  "shared_hash_records_initial": 125,
+  "shared_hash_records_final": 125,
+  "vertices": 12,
+  "edges": 18,
+  "accepted_requests": [
+    {
+      "RequestID": "C001",
+      "FarmID": "doj25",
+      "EstimatedFeedstock": 11.0,
+      "TransportTime": 10.0,
+      "CollectionPriority": 1.0,
+      "Path": [
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C002",
+      "FarmID": "c96c9",
+      "EstimatedFeedstock": 8.0,
+      "TransportTime": 15.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "c96c9",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C003",
+      "FarmID": "974d7",
+      "EstimatedFeedstock": 15.0,
+      "TransportTime": 19.0,
+      "CollectionPriority": 0.75,
+      "Path": [
+        "974d7",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C004",
+      "FarmID": "bcdff",
+      "EstimatedFeedstock": 21.0,
+      "TransportTime": 20.0,
+      "CollectionPriority": 1.0,
+      "Path": [
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C005",
+      "FarmID": "56jwf",
+      "EstimatedFeedstock": 6.0,
+      "TransportTime": 23.0,
+      "CollectionPriority": 0.25,
+      "Path": [
+        "56jwf",
+        "974d7",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C006",
+      "FarmID": "c81cd",
+      "EstimatedFeedstock": 15.5,
+      "TransportTime": 30.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "c81cd",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C007",
+      "FarmID": "0bfa4",
+      "EstimatedFeedstock": 16.5,
+      "TransportTime": 32.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "0bfa4",
+        "c96c9",
+        "doj25",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C008",
+      "FarmID": "c6e42",
+      "EstimatedFeedstock": 24.0,
+      "TransportTime": 39.0,
+      "CollectionPriority": 0.6,
+      "Path": [
+        "c6e42",
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C009",
+      "FarmID": "1cc85",
+      "EstimatedFeedstock": 25.5,
+      "TransportTime": 50.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "1cc85",
+        "bcdff",
+        "HUB_PINJARRA"
+      ]
+    },
+    {
+      "RequestID": "C010",
+      "FarmID": "f4386",
+      "EstimatedFeedstock": 27.5,
+      "TransportTime": 54.0,
+      "CollectionPriority": 0.5,
+      "Path": [
+        "f4386",
+        "c81cd",
+        "HUB_PINJARRA"
+      ]
+    }
+  ],
+  "heap_insertions": 10,
+  "heap_extractions": 10,
+  "collection_order": [
+    "C001",
+    "C004",
+    "C003",
+    "C008",
+    "C002",
+    "C006",
+    "C007",
+    "C009",
+    "C010",
+    "C005"
+  ],
+  "skipped_requests": [],
+  "archive_count": 10,
+  "archive_request_order": [
+    "C001",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C006",
+    "C007",
+    "C008",
+    "C009",
+    "C010"
+  ],
+  "archive_times": [
+    10.0,
+    15.0,
+    19.0,
+    20.0,
+    23.0,
+    30.0,
+    32.0,
+    39.0,
+    50.0,
+    54.0
+  ],
+  "statuses": {
+    "pending": 0,
+    "collected": 10,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "checks": {
+    "same_hash_graph_and_archive_instances": true,
+    "graph_meets_specification": true,
+    "at_least_ten_accepted_requests": true,
+    "every_accepted_request_archived": true,
+    "all_request_snapshots_preserved": true,
+    "all_dispatched_or_skipped": true,
+    "both_sorts_agree_on_ascending_times": true,
+    "heap_empty_after_dispatch": true
+  },
+  "artifacts": [
+    "integration_demo.txt",
+    "integration_validation.json",
+    "integration_records_sorted.csv",
+    "integration_records.sqlite3"
+  ]
+}
